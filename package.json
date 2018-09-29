@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "Unofficial-Flipboard-App",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A minimal Unofficial Electron application for Flipboard! ",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/serhangursoy/Unofficial-Flipboard-App",
   "keywords": [
     "Electron",
     "quick",
@@ -14,9 +14,9 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Serhan Gürsoy",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^3.0.0"
+    "electron": "^3.0.2"
   }
 }
