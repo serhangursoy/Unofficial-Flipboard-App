@@ -4,7 +4,11 @@
   "description": "A minimal Unofficial Electron application for Flipboard! ",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build",
+	"dist-all": "electron-builder -lw"
   },
   "repository": "https://github.com/serhangursoy/Unofficial-Flipboard-App",
   "keywords": [
@@ -14,9 +18,28 @@
     "tutorial",
     "demo"
   ],
-  "author": "Serhan Gürsoy",
+  "author": "Serhan Gürsoy <john@doe.com>",
   "license": "CC0-1.0",
+  "build": {
+    "appId": "com.electron.unofflipboardapp",
+    "productName": "Unofficial Flipboard",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false
+    }
+  },
   "devDependencies": {
+    "electron-builder": "^20.28.4",
+    "install": "^0.12.1",
     "electron": "^3.0.2"
   }
 }
