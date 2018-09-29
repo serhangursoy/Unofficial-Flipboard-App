@@ -23,6 +23,10 @@
   "build": {
     "appId": "com.electron.unofflipboardapp",
     "productName": "Unofficial Flipboard",
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icons/Icon-512.png"
+    },
     "linux": {
       "target": [
         "AppImage",
