@@ -1,0 +1,87 @@
+
+.loader {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 0.2rem;
+  text-transform: uppercase;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(90deg, transparent 50%, #F44336 25%);
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  -webkit-animation: Gradient 2.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite alternate;
+          animation: Gradient 2.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite alternate;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position-x: 0%;
+  }
+  25% {
+    background-position-x: 100%;
+  }
+  50% {
+    background-position-x: 200%;
+  }
+  75% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position-x: 0%;
+  }
+  25% {
+    background-position-x: 100%;
+  }
+  50% {
+    background-position-x: 200%;
+  }
+  75% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
+
+.iconRed {
+   color: red;
+   border-radius: 10px;
+   -webkit-transition: color 2s, background 2s;
+    transition: color 2s, background 2s;
+}
+
+.iconRed:hover {
+  color: white;
+  background: red;
+}
+
+
+nav {
+    -webkit-app-region: drag;
+}
+
+nav>a, nav>div>a {
+   -webkit-app-region: no-drag;
+}
+
+.navbar-button {
+  color: black;
+}
+
+.navbar-button:hover {
+  color: red;
+}
+
+
+
+
+.material-icons {
+  border-style: solid !important;
+   border-width: 5px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Unofficial Flipboard!</title>
+  <!-- Get bootstrap and other stuff for nice visualization -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/master.css">
+</head>
+
+<body>
+  <!-- Cute loader taken from codepen -->
+  <div class="loader">Loading</div>
+  <!-- Start with creating a fine webview -->
+  <webview id="flipboardViewer" src="https://www.flipboard.com/" allowpopups style="display:inline-flex; height: 93.5vh; width: 100%"></webview>
+
+  <!-- Navigation side -->
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+   <a class="navbar-button" id="goBackButton" href="#" style="margin-left: 20px; margin-top: 5px" data-toggle="tooltip" data-placement="right" title="Go Back">
+     <i class="material-icons">arrow_back_ios</i>
+   </a>
+   <a class="navbar-button" id="homeButton" href="#" data-toggle="tooltip" data-placement="right" title="Return to Home">
+     <i class="material-icons">home</i>
+   </a>
+   <a class="navbar-button" id="externalButton" href="#" data-toggle="tooltip" data-placement="right" title="Open in Browser">
+     <i class="material-icons">launch</i>
+   </a>
+   <div class="my-lg">
+      <a class="navbar-button" id="minimizeButton" href="#" data-toggle="tooltip" data-placement="right" title="Minimize">
+        <i class="material-icons">minimize</i>
+      </a>
+      <a class="navbar-button" id="maximizeButton" href="#" data-toggle="tooltip" data-placement="right" title="Maximize">
+        <i class="material-icons">tab</i>
+      </a>
+      <a class="navbar-button" id="closeButton" href="#" data-toggle="tooltip" data-placement="right" title="Close">
+        <i class="material-icons iconRed">close</i>
+      </a>
+   </div>
+  </nav>
+
+  <script>
+    require('./renderer.js')
+  </script>
+</body>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+</html>
